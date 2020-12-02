@@ -1,7 +1,7 @@
-<h1 align="center">Venturus Job Test</h1>
+<h1 align="center">NONG Job Test</h1>
 <h2 align="center">
 
-This project was developed as a job test for Venturus.</h1>
+This project was developed as a job test for NONG.</h1>
 <img src="https://img.shields.io/badge/made%20by-joaoricardotg-blue.svg" >
 
 ## The App

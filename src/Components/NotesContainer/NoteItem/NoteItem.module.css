@@ -1,0 +1,43 @@
+.container {
+    border-radius: 10px;
+    padding: 20px 30px;
+    display: grid;
+    grid-template-columns: 80fr 20fr;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;    
+    row-gap: 20px;
+    height: 170px;
+    transition: ease all 0.3s;
+    background: white;
+    z-index: 70;
+    
+}
+
+.container:hover {
+    transform: scale(1.05);
+    background: linear-gradient(white,rgba(0, 255, 0, 0.274)) ;
+}
+
+.container>* {
+    font-size: 16px;
+    color: blue;
+}
+
+.desc {
+    font-size: 16px;
+    grid-column: span 2;
+    color: black;
+}
+
+@media (max-width: 800px) {
+    .container {
+        height: 250px;
+    }
+
+    .desc{ 
+        height: 80%;
+        overflow: hidden;
+        width: 90%;
+        
+    }
+}

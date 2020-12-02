@@ -1,0 +1,110 @@
+.container {
+    position: absolute;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 500px;
+    margin-top: -200px;
+    margin-left: -300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: grid;
+    place-items: center;
+    z-index: 200;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+    place-items: center;
+}
+
+.input {
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    border: rgba(0,0,0,0.2) solid 1px;
+    padding: 0 20px;
+    outline: 0;
+}
+
+.descLabel {
+    align-self: start;
+}
+
+.titleBox {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.closeButton {
+    color: black;
+    font-size: 30px;
+    transition: ease all 0.3s;
+    cursor: pointer;
+}
+
+.closeButton:hover {
+    color: red
+}
+
+.textArea {
+    height: 100px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    outline: 0;
+    resize: none;
+}
+
+.btn {
+    width: 200px;
+    height: 50px;
+    color: rgb(0, 168, 89);
+    background: white;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 0;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: ease all 0.3s;
+    margin-right: 10px;
+}
+
+.btn:hover {
+
+    color: white;
+    background: rgb(0, 168, 89);
+}
+
+@media (max-width: 800px) {
+    
+    .container {
+        width: 500px;
+        margin-left: -250px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 300px;
+        margin-left: -150px;
+        height: 700px;
+        margin-top: -350px;
+    }
+
+    .titleBox {
+        width: 100%;
+        margin: 20px 0;
+    }
+}

@@ -1,6 +1,42 @@
-# Getting Started with Create React App
+<h1 align="center">Venturus Job Test</h1>
+<h2 align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was developed as a job test for Venturus.</h1>
+<img src="https://img.shields.io/badge/made%20by-joaoricardotg-blue.svg" >
+
+## The App
+The app was built with React.js and is responsive, working in desktop, tablet and phone devices. The app illustrates an interface for creating and configuring soccer teams. It is composed of two pages, the main one displays all the teams the user has created, a board displaying average ages of players and another board displaying percentages of picks for a chosen team.  
+<img src="./1.png" width="100%">
+The second page is opened whenever the user wants to create a new team or configure an already existing one, displaying input fields to define the team's name, a description of the team, tags, two radio buttons to define if the team is a fictional or real one and a website URL for the team. The user can also define the formation of the team and position of each player in the field.
+<img src="./2.png" width="100%">
+
+## Technologies used
+For this app, the frontend was built with React.js, while the API was built by me with Node.js/Express.js and the information about teams and clients was stored in MongoDB Atlas, which acts as an online MongoDB database.
+
+The backend is live at https://venturus.herokuapp.com/ and the frontend is live at https://joaoricardotg-venturus.netlify.app/. The backend site doesn't show anything when accessed by clicking the herokuapp link, but it's used by the frontend fetch operations.
+
+## Backend routes
+There are 5 routes for the backend, all POST's receiving JSON as requests. 
+### `POST /createUsr` 
+Receives an JSON in the format {name, password, email} to create a new account for a client.
+
+
+### `POST /createTeam`
+Receives an JSON in the format {teamName, description, website, type, tags, formation}. Creates a team with a random number of players between 22 and 25 players. The team composition such as names of each player, nacionality, age, number of times each player was chosen, are all generated randomly. Names are provided by the API "names.drycodes", ages are generated between 18 and 40 years, the number of picks for each player varies between 5 and 50 and the player nacionality is provided by the API "REST Countries"
+
+### `POST /updateTeam`
+Receives an JSON in the format {id, teamID, teamName, description, website, type, tags, formation}. Id is the ID of the client, which is stored in MongoDB Atlas. The route receives these data and updates the info registered in the database.
+
+### `POST /getUsrInfo`
+Receives an JSON in the format {id} for the id of the client present in the database and returns his info, such as the teams present in his/her account.
+
+### `POST /deleteTeam`
+Receives a JSON in the format {id, teamID} in order to delete an specific team from the database.
+
+## Implementation
+
+The implementation is composed of an App.js file, that calls all the other components in the app. The app contains 4 mains components, MyTeams, Top5, Statistics and Configure, where the three first components are present in the main page, and the last one is present in the configuration page.
+
 
 ## Available Scripts
 
@@ -33,38 +69,3 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

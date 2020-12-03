@@ -5,15 +5,15 @@ This project was developed as a job test for NONG.</h1>
 <img src="https://img.shields.io/badge/made%20by-joaoricardotg-blue.svg" >
 
 ## The App
-The app was built with React.js and is responsive, working in desktop, tablet and phone devices. The app illustrates an interface for creating and configuring field notes takes during crop scouting. It is very common for these notes to be taken on paper, which makes it hard to manage them. This web app helps manage these crop scouting notes by keeping them saved and ordered by date. The app authenticates the user with Firebase authentication technology, stores the notes in Cloud Firestore and is hosted by Firebase hosting. composed of two pages, the main one displays all the teams the user has created, a board displaying average ages of players and another board displaying percentages of picks for a chosen team.  
+The app was built with React.js and is responsive, working in desktop, tablet and phone devices. The app illustrates an interface for creating and configuring field notes takes during crop scouting. It is very common for these notes to be taken on paper, which makes it hard to manage them. This web app helps manage these crop scouting notes by keeping them saved and ordered by date. The app authenticates the user with Firebase authentication technology, stores the notes in Cloud Firestore and is hosted by Firebase hosting.  
 <img src="./1.png" width="100%">
 The second page is opened whenever the user wants to create a new team or configure an already existing one, displaying input fields to define the team's name, a description of the team, tags, two radio buttons to define if the team is a fictional or real one and a website URL for the team. The user can also define the formation of the team and position of each player in the field.
 <img src="./2.png" width="100%">
 
 ## Technologies used
-For this app, the frontend was built with React.js, while the API was built by me with Node.js/Express.js and the information about teams and clients was stored in MongoDB Atlas, which acts as an online MongoDB database.
+For this app, the frontend was built with React.js, while the backend is hosted and configured by Firebase and Cloud Firestore.
 
-The backend is live at https://venturus.herokuapp.com/ and the frontend is live at https://joaoricardotg-venturus.netlify.app/. The backend site doesn't show anything when accessed by clicking the herokuapp link, but it's used by the frontend fetch operations.
+The site is live at https://nong-640e0.firebaseapp.com/login.
 
 ## Backend routes
 There are 5 routes for the backend, all POST's receiving JSON as requests. 

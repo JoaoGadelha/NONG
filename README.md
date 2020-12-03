@@ -1,6 +1,41 @@
-# Getting Started with Create React App
+<h1 align="center">NONG Job Test</h1>
+<h2 align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was developed as a job test for NONG.</h1>
+<img src="https://img.shields.io/badge/made%20by-joaoricardotg-blue.svg" >
+
+## The App
+The app was built with React.js and is responsive, working in desktop, tablet and phone devices. The app illustrates an interface for creating and configuring field notes taken during crop scouting. It is very common for these notes to be taken on paper, which makes it hard to manage them. This web app helps manage these crop scouting notes by keeping them saved and ordered by date. The app authenticates the user with Firebase authentication technology, stores the notes in Cloud Firestore and is hosted by Firebase hosting. 
+
+<img src="./notes_page.png" width="100%">
+
+The app also features a login and signup pages for user registration and authentication.
+
+<img src="./login_page.png" width="100%">
+
+<img src="./signup_page.png" width="100%">
+
+Also, the app features a page for reseting the password in case the user has forgoten his/her password and a logout button.
+
+## Technologies used
+For this app, the frontend was built with React.js, while the backend is hosted and configured by Firebase and Cloud Firestore.
+
+The site is live at https://nong-640e0.firebaseapp.com/.
+
+## Backend routes
+There are 4 routes for the backend. 
+### `/login` 
+Displays the login page.
+
+
+### `/signup`
+Displays the signup page.
+
+### `/resetPassword`
+Displays the page where the user inserts his/her e-mail address in order to reset its password.
+
+### `/`
+Redirects to the notes creation and configuration page. This page won't be displayed unless the user has signed in.
 
 ## Available Scripts
 
@@ -32,39 +67,3 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

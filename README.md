@@ -6,11 +6,13 @@ This project was developed as a job test for NONG.</h1>
 
 ## The App
 The app was built with React.js and is responsive, working in desktop, tablet and phone devices. The app illustrates an interface for creating and configuring field notes taken during crop scouting. It is very common for these notes to be taken on paper, which makes it hard to manage them. This web app helps manage these crop scouting notes by keeping them saved and ordered by date. The app authenticates the user with Firebase authentication technology, stores the notes in Cloud Firestore and is hosted by Firebase hosting. 
+
 <img src="./notes_page.png" width="100%">
 
 The app also features a login and signup pages for user registration and authentication.
 
 <img src="./login_page.png" width="100%">
+
 <img src="./signup_page.png" width="100%">
 
 Also, the app features a page for reseting the password in case the user has forgoten his/her password and a logout button.

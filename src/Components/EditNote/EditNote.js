@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react'
 import styles from './EditNote.module.css'
 import { Context } from "../../Context.js";
-import { updateNote, deleteNote, createNote } from '../../functions/functions'
+import { fetchData, updateNote, deleteNote, createNote } from '../../functions/functions'
 
 const EditNote = () => {
-    let { editWindowIsVisible, setEditWindowIsVisible, currentNote, createFlag } = useContext(Context);
+    let { editWindowIsVisible, setEditWindowIsVisible, currentNote, createFlag, firestoreData, setFirestoreData, collection } = useContext(Context);
     let [nameState, setNameState] = useState('');
     let [dateState, setDateState] = useState('');
     let [descState, setDescState] = useState('');
@@ -19,6 +19,7 @@ const EditNote = () => {
             setDateState('');
             setDescState('');
         }
+        fetchData(collection, setFirestoreData);
     }, [editWindowIsVisible])
 
     return (
@@ -33,18 +34,18 @@ const EditNote = () => {
                 <h3 >Name:</h3>
                 <input className={styles.input} value={nameState} onChange={(e) => setNameState(e.target.value)}></input>
                 <h3>Date:</h3>
-                <input className={styles.input} value={dateState} onChange={(e) => setDateState(e.target.value)}></input>
+                <input type = 'date' className={styles.input} value={dateState} onChange={(e) => setDateState(e.target.value)}></input>
                 <h3 className={styles.descLabel}>Description:</h3>
                 <textarea value={descState}
-                 onChange={(e) => setDescState(e.target.value)} className={styles.textArea}></textarea>
+                    onChange={(e) => setDescState(e.target.value)} className={styles.textArea}></textarea>
                 <h1 className={styles.btn} onClick={
                     createFlag ?
-                        () => { setEditWindowIsVisible(false); createNote('NONG', { name: nameState, date: dateState, description: descState }) }
-                        : () => { setEditWindowIsVisible(false); updateNote('NONG', currentNote.id, { name: nameState, date: dateState, description: descState }) }
+                        () => { setEditWindowIsVisible(false); createNote({ name: nameState, date: dateState, description: descState }) }
+                        : () => { setEditWindowIsVisible(false); updateNote(currentNote.id, { name: nameState, date: dateState, description: descState }) }
                 }>
                     SAVE</h1>
                 {!createFlag &&
-                    <h1 className={styles.btn} onClick={currentNote !== undefined ? () => { setEditWindowIsVisible(false); deleteNote('NONG', currentNote.id) } : ''}>DELETE</h1>
+                    <h1 className={styles.btn} onClick={currentNote !== undefined ? () => { setEditWindowIsVisible(false); deleteNote(currentNote.id) } : ''}>DELETE</h1>
                 }
             </div>
         </div >

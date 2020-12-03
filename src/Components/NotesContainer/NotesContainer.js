@@ -3,9 +3,14 @@ import firebase from '../../Firebase'
 import NoteItem from './NoteItem/NoteItem'
 import styles from './NotesContainer.module.css'
 import { Context } from "../../Context.js";
+import {fetchData} from '../../functions/functions'
 
 const NotesContainer = () => {
-    let { firestoreData } = useContext(Context);
+    let { firestoreData, setFirestoreData, collection } = useContext(Context);
+
+    useEffect(()=>{
+        fetchData(collection, setFirestoreData);
+    },[])
 
     return (
         <div>

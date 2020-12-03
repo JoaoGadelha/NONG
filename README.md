@@ -5,8 +5,7 @@ This project was developed as a job test for NONG.</h1>
 <img src="https://img.shields.io/badge/made%20by-joaoricardotg-blue.svg" >
 
 ## The App
-The app was built with React.js and is responsive, working in desktop, tablet and phone devices. The app illustrates an interface for creating and configuring field notes taken during crop scouting. It is very common for these notes to be taken on paper, which makes it hard to manage them. This web app helps manage these crop scouting notes by keeping them saved and ordered by date. The app authenticates the user with Firebase authentication technology, stores the notes in Cloud Firestore and is hosted by Firebase hosting. Also, the user can logout from his/her account and can reset their account's password, in case they have forgotten it. 
-
+The app was built with React.js and is responsive, working in desktop, tablet and phone devices. The app illustrates an interface for creating and configuring field notes taken during crop scouting. It is very common for these notes to be taken on paper, which makes it hard to manage them. This web app helps manage these crop scouting notes by keeping them saved and ordered by date. The app authenticates the user with Firebase authentication technology, stores the notes in Cloud Firestore and is hosted by Firebase hosting. 
 <img src="./notes_page.png" width="100%">
 
 The app also features a login and signup pages for user registration and authentication.
@@ -14,7 +13,7 @@ The app also features a login and signup pages for user registration and authent
 <img src="./login_page.png" width="100%">
 <img src="./signup_page.png" width="100%">
 
-Also, the app features a page for reseting the password in case the user has forgoten his/her password.
+Also, the app features a page for reseting the password in case the user has forgoten his/her password and a logout button.
 
 ## Technologies used
 For this app, the frontend was built with React.js, while the backend is hosted and configured by Firebase and Cloud Firestore.
@@ -35,11 +34,6 @@ Displays the page where the user inserts his/her e-mail address in order to rese
 
 ### `/`
 Redirects to the notes creation and configuration page. This page won't be displayed unless the user has signed in.
-
-## Implementation
-
-The implementation is composed of an App.js file, that calls all the other components in the app. The app contains 4 mains components, MyTeams, Top5, Statistics and Configure, where the three first components are present in the main page, and the last one is present in the configuration page.
-
 
 ## Available Scripts
 
